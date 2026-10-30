@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URBAN MEN | Moda Masculina</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo">URBAN<span>MEN.</span></div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <button class="cart-button" onclick="toggleCart()">
+        🛒 Carrinho (<span id="cart-count">0</span>)
+    </button>
+</header>
+
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <p>ESTILO É ATITUDE</p>
+        <h1>Vista sua<br>melhor versão.</h1>
+        <span>Moda masculina para homens que fazem acontecer.</span>
+        <a href="#produtos" class="hero-button">COMPRAR AGORA</a>
+    </div>
+</section>
+
+<section class="categories">
+    <h2>Explore nossas categorias</h2>
+
+    <div class="category-buttons">
+        <button onclick="filterProducts('todos')">Todos</button>
+        <button onclick="filterProducts('camisetas')">Camisetas</button>
+        <button onclick="filterProducts('calcas')">Calças</button>
+        <button onclick="filterProducts('tenis')">Tênis</button>
+        <button onclick="filterProducts('acessorios')">Acessórios</button>
+    </div>
+</section>
+
+<section class="products" id="produtos">
+    <h2>Produtos em destaque</h2>
+    <p class="subtitle">Escolha seu próximo estilo.</p>
+
+    <div class="product-grid" id="product-list"></div>
+</section>
+
+<section class="promo" id="sobre">
+    <h2>SEU ESTILO. SUAS REGRAS.</h2>
+    <p>Vista confiança. Vista personalidade. Vista Urban Men.</p>
+</section>
+
+<section class="newsletter" id="contato">
+    <h2>Fique por dentro das novidades</h2>
+    <p>Cadastre seu e-mail para receber ofertas exclusivas.</p>
+
+    <form id="newsletter-form">
+        <input type="email" id="email" placeholder="Seu melhor e-mail" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <p id="newsletter-message"></p>
+</section>
+
+<footer>
+    <div class="logo">URBAN<span>MEN.</span></div>
+    <p>© 2026 Urban Men. Todos os direitos reservados.</p>
+    <p>Moda masculina com personalidade.</p>
+</footer>
+
+<div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+<aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+        <h2>Meu carrinho</h2>
+        <button onclick="toggleCart()">✕</button>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-footer">
+        <h3>Total: <span id="cart-total">R$ 0,00</span></h3>
+        <button onclick="checkout()">Finalizar pedido</button>
+    </div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
